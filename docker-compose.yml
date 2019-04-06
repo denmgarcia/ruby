@@ -13,3 +13,9 @@ services:
       - "3000:3000"
     depends_on:
       - db
+  webserver:
+    build: ./nginx
+    ports:
+      - "8080:8080"
+    links:
+      - web:web
