@@ -1,0 +1,21 @@
+<h1>Blog Post</h1>
+
+<% @posts.each do |post| %>
+<div class="container">
+	<div class="well" style="background-color:  #f0f0f0; margin: 10px">
+		<table>
+			<tr>
+				<td><h3 align="center"><%= post.title %></h3></td>
+			</tr>
+			<tr>
+				<td><p><%= post.body %></p></td>
+			</tr>
+			<tr>
+				<td><%= link_to "Read More", post_path(post), :class => 'btn btn-danger' %></td>
+			</tr>
+		</table>
+	</div>
+</div>
+<br>
+
+<% end %>
